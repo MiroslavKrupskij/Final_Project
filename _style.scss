@@ -6,10 +6,81 @@ body {
     margin: 0;
     padding: 0;
 }
+.header {
+    background-color: #323264;
+}
+.section1, .section2 {
+    background-color: #323264;
+}
+.swipe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+.swipe-links {
+    display: flex;
+    flex-shrink: 0;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 0 30px;
+}
+.swipe hr {
+    width: 315px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.30);
+    margin: 0;
+    border: 0;
+    margin: 30px auto 0 auto;
+    
+}
+.swipelink {
+    color:#B3B3BA;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.swipelink:first-child {
+    background: var(--gradient-text-red-reversed, linear-gradient(90deg, #EF8080 0.84%, #F0145A 99.96%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.swipelink:hover {
+    color: #F0145A;
+}
+.swipe-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 30px;
+}
+.main-title {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+.header-title {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    padding: 30px 0 0 0;
+}
+.main-title-text {
+    font-size: 19px;
+    color: white;
+    font-weight: 400;
+    line-height: 30px;
+}
 .section1 {
     background-color: #323264;
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 60px;
+    margin: 0;
 }
 .wrapper {
     width: 315px;
@@ -21,7 +92,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
-    margin-top: 30px;
 }
 .link-box {
     font-size: 14px;
@@ -30,9 +100,14 @@ body {
     text-transform: uppercase;
     color: #24A3FF;
     text-decoration: none;
+    padding-right: 10px;
+    background-image: url(./content/Arrow.png);
+    background-repeat: no-repeat;
+    background-position: right;
 }
 .link-box:hover {
     color: #F0145A;
+    background-image: url(./content/Arrow_hover.png);
 }
 .link-pic {
     width: 12px;
@@ -360,6 +435,23 @@ body {
     .wrapper {
         width: 648px;
     }
+    .swipe {
+        align-items: center;
+    }
+    .swipe-links {
+        padding: 0 60px 0 70px;
+    }
+    .swipe hr {
+        width: 648px;
+        margin-top: 60px;
+    }
+    .swipe-content {
+        margin: auto;
+        max-width: 648px;
+    }
+    .header-title {
+        padding: 60px 0 0 0;
+    }
     .box2 {
         gap: 30px;
     }
@@ -435,6 +527,36 @@ body {
 @media (min-width: 1024px) {
     .wrapper {
         width: 904px;
+    }
+    .swipe {
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1360px;
+        gap: 0;
+        padding: 60px 0;
+        
+    }
+    .swipe-links {
+        flex-direction: column;
+        padding: 0 60px 0 0;
+        text-align: right;
+        overflow: hidden;
+    }
+    .swipe-section-wrap {
+        padding: 0;
+    }
+    .swipe hr {
+        width: 4px;
+        height: 303px;
+        margin: 0;
+    }
+    .main-title {
+        display: flex;
+        width: 405px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
     }
     .box2 {
         gap: 60px;
