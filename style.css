@@ -613,6 +613,9 @@ body {
   .swipe-section-wrap {
     padding: 0;
   }
+  .swipe-content {
+    padding-left: 60px;
+  }
   .swipe hr {
     width: 4px;
     height: 303px;
